@@ -66,29 +66,25 @@ while (countdown > 0) {
 
 // /****************** Exercise 5 ********************/
 
-// //Review This Code
-// const secretNumber = Math.floor(Math.random() * 100) + 1;
-// let guess;
-// let attempts = 0;
+//Review This Code
+const secretNumber = Math.floor(Math.random() * 100) + 1;
+let guess;
+let attempts = 0;
 
-// while (guess !== secretNumber) {
-//     guess = parseInt(prompt("Guess a number between 1 and 100:"));
-
-//     if (guess < secretNumber) {
-//         attempts++
-//         alert("Too low!");
-//     } else if (guess > secretNumber) {
-//         attempts++
-//         alert("Too high!")
-//     } else if (guess === secretNumber) {
-//         attempts++
-//         console.log(`Exercise 5:\nExercise 5 is over because you guessed the secret number ${secretNumber} in ${attempts} attempts!`);
-//         alert(`Congratulations! You guess the number ${secretNumber} in ${attempts} attempts!`);
-
-//     } else {
-//         attempts = 0
-//     }
-// }
+while (guess !== secretNumber) {
+    guess = parseInt(prompt("Guess a number between 1 and 100:"));
+    if (isNaN(guess)) {
+        alert('Please enter a valid number.');
+    } else { attempts++ }
+    if (guess < secretNumber) {
+        alert("Too low!");
+    } else if (guess > secretNumber) {
+        alert("Too high!")
+    } else {
+        console.log(`Exercise 5:\nExercise 5 is over because you guessed the secret number ${secretNumber} in ${attempts} attempts!`);
+        alert(`Congratulations! You guess the number ${secretNumber} in ${attempts} attempts!`);
+    }
+}
 
 
 // // Refactor the code so that:
